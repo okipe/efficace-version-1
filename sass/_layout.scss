@@ -1,0 +1,167 @@
+// En este archivo deberán ir todas las reglas relacionadas con layout:
+
+// Se considera layout:
+// - grid
+// - contenedores
+
+@use 'base' as *;
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    .navbar {
+        // display: flex;
+
+        &__menu {
+            align-items: center;
+            display: flex;
+            // display: grid;
+            // grid-template-columns: 1fr repeat(4, 2fr);
+            
+        }
+    }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    
+    // .hero {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-around;
+    // }
+
+    .hero {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 600px));
+        justify-content: space-between;
+        // border: 1px solid #000;
+
+    }
+
+    .services {
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(75px, 500px));
+            grid-template-rows: 1fr;
+            // gap: 100px;
+
+            &__item {
+                display: flex;
+                // border: 1px solid #000;
+
+            }
+        }
+    }
+
+    .we-are {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+
+        &__text {
+            align-self: center;
+        }
+    }
+
+    .team {
+        display: grid;
+        grid-template-columns: 1fr;
+        // gap: 50px;
+
+        &__text {
+            align-self: center;
+        }
+
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(125px, 600px));
+            grid-template-rows: 1fr;
+            // gap: 100px;
+
+            &__item {
+                display: flex;
+                // border: 1px solid #000;
+
+            }
+        }
+    }
+
+    /* .team {
+        display: grid;
+        grid-template-columns: minmax(200px, 603px) minmax(263px, 524px);
+        justify-content: space-between;
+        // grid-template-columns: repeat(2, minmax(200px, 600px));
+        // grid-template-columns: 2fr 3fr;
+        gap: 50px;
+
+        &__text {
+            align-self: center;
+        }
+    } */
+
+    .resources__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 600px));
+        gap: 50px;
+
+        &__title {
+            align-self: center;
+        }
+    }
+
+    .books {
+        // display: grid;
+        // grid-template-columns: 1fr;
+
+        &__ranking .books__ranking__book-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px; 
+
+            .books__ranking__item {
+                display: grid;
+                grid-template-columns: minmax(30%, 300px) 1fr;
+                // gap: 50px; // It increases the total height 
+            }
+        }
+    }
+
+    .cv-templates {
+        &__ranking .cv-templates__ranking__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3%;
+        }
+    }
+
+    .podcasts {
+        &__topic .podcasts__topic__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
+
+    .trends {
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
+}
+
+footer .footer__container {
+    display: flex;
+    justify-content: space-between;
+}
